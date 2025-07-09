@@ -16,32 +16,6 @@
         .section {
             scroll-margin-top: 64px; /* Adjust for fixed header height */
         }
-        .summary-box {
-            background-color: #f0f9ff;
-            border-left: 4px solid #3b82f6;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.25rem;
-        }
-        .loader {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #FFF;
-            border-bottom-color: transparent;
-            border-radius: 50%;
-            display: inline-block;
-            box-sizing: border-box;
-            animation: rotation 1s linear infinite;
-            margin-right: 8px;
-        }
-        @keyframes rotation {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -92,12 +66,6 @@
                     <a href="Sachchidanand Soaham Gupta-CV .docx" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300 shadow-sm">View CV</a>
                     <a href="mailto:soaham.gupta@pitt.edu" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-300 transition duration-300">Email Me</a>
                 </div>
-                 <!-- Gemini Feature: Explain Research -->
-                <button id="explain-research-btn" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition duration-300 shadow-sm flex items-center justify-center">
-                    <span class="btn-text">✨ Explain My Research in Simple Terms</span>
-                    <span class="loader hidden"></span>
-                </button>
-                <div id="research-explanation" class="summary-box mt-4 hidden"></div>
             </div>
         </section>
 
@@ -108,12 +76,12 @@
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                     <div class="text-3xl text-blue-600 mb-4"><i class="fas fa-atom"></i></div>
                     <h3 class="text-xl font-bold mb-2">Nanomaterials & Chirality</h3>
-                    <p class="text-gray-600">Exploring chirality in low-dimensional nanomaterials and developing novel defect-engineering strategies to control their optical and chiroptical properties.</p>
+                    <p class="text-gray-600">Exploring chirality in SWCNTs and exploring novel defect-engineering strategies to control their optical and chiroptical properties.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                     <div class="text-3xl text-blue-600 mb-4"><i class="fas fa-cogs"></i></div>
                     <h3 class="text-xl font-bold mb-2">SWCNT Platform Engineering</h3>
-                    <p class="text-gray-600">Using DNA-wrapping and chemical functionalization to create tailored single-walled carbon nanotube (SWCNT) platforms with modulated photoluminescence.</p>
+                    <p class="text-gray-600">Using DNA-wrapping and surfactant ATPE to perform entnatiomeric enrichment of SWCNTs and use chemical functionalization to create tailored single-walled carbon nanotube (SWCNT) platforms with modulated photoluminescence..</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                     <div class="text-3xl text-blue-600 mb-4"><i class="fas fa-vial"></i></div>
@@ -135,12 +103,7 @@
                     <p class="text-gray-600 mb-4"><em>Journal of Materials Chemistry B</em></p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="#" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
-                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
-                            <span class="btn-text">✨ Generate Layman's Summary</span>
-                            <span class="loader hidden"></span>
-                        </button>
                     </div>
-                    <div class="summary-output summary-box hidden"></div>
                 </div>
                  <!-- Publication Item -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -150,12 +113,7 @@
                     <p class="text-gray-600 mb-4"><em>Essential Oils: Extraction Methods and Applications, 193-219</em></p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:d1gkVwhDpl0C" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
-                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
-                            <span class="btn-text">✨ Generate Layman's Summary</span>
-                            <span class="loader hidden"></span>
-                        </button>
                     </div>
-                    <div class="summary-output summary-box hidden"></div>
                 </div>
                 <!-- Publication Item -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -165,12 +123,7 @@
                     <p class="text-gray-600 mb-4"><em>International journal of biological macromolecules 188, 542-567</em></p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:u-x6o8ySG0sC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
-                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
-                            <span class="btn-text">✨ Generate Layman's Summary</span>
-                            <span class="loader hidden"></span>
-                        </button>
                     </div>
-                    <div class="summary-output summary-box hidden"></div>
                 </div>
                 <!-- Publication Item -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -180,12 +133,7 @@
                     <p class="text-gray-600 mb-4"><em>Indian Journal of Chemical Technology Vol. 28, 730-734</em></p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:2osOgNQ5qMEC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
-                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
-                            <span class="btn-text">✨ Generate Layman's Summary</span>
-                            <span class="loader hidden"></span>
-                        </button>
                     </div>
-                    <div class="summary-output summary-box hidden"></div>
                 </div>
                  <!-- Publication Item -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -195,12 +143,7 @@
                     <p class="text-gray-600 mb-4"><em>Spectroscopy and Machine Learning for Water Quality Analysis</em></p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:Y0pCki6q_DkC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
-                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
-                            <span class="btn-text">✨ Generate Layman's Summary</span>
-                            <span class="loader hidden"></span>
-                        </button>
                     </div>
-                    <div class="summary-output summary-box hidden"></div>
                 </div>
                 <!-- Publication Item -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -210,12 +153,7 @@
                     <p class="text-gray-600 mb-4"><em>Digital Encyclopedia of Applied Physics, 1-22</em></p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:9yKSN-GCB0IC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
-                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
-                            <span class="btn-text">✨ Generate Layman's Summary</span>
-                            <span class="loader hidden"></span>
-                        </button>
                     </div>
-                    <div class="summary-output summary-box hidden"></div>
                 </div>
                 <!-- Publication Item -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -225,12 +163,7 @@
                     <p class="text-gray-600 mb-4"><em>Materials Research Express 5 (4), 045037</em></p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:qjMakFHDy7sC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
-                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
-                           <span class="btn-text">✨ Generate Layman's Summary</span>
-                           <span class="loader hidden"></span>
-                        </button>
                     </div>
-                    <div class="summary-output summary-box hidden"></div>
                 </div>
             </div>
         </section>
@@ -248,9 +181,13 @@
                     </a>
                 </div>
                 <div class="flex justify-center space-x-6 mt-8 text-2xl text-gray-600">
-                    <a href="#" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/soaham21" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/Soaham_Gupta98" target="_blank" class="hover:text-blue-600 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/soahamgupta/" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-linkedin"></i></a>
                     <a href="https://scholar.google.com/citations?user=0tncwMcAAAAJ&hl=en" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fas fa-graduation-cap"></i></a>
                 </div>
             </div>
@@ -264,122 +201,7 @@
         </div>
     </footer>
 
-    <!-- Modal for errors -->
-    <div id="error-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-8 rounded-lg shadow-2xl max-w-sm w-full">
-            <h3 class="text-xl font-bold text-red-600 mb-4">Error</h3>
-            <p id="error-message" class="text-gray-700 mb-6">An unexpected error occurred.</p>
-            <button id="close-modal-btn" class="bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition w-full">Close</button>
-        </div>
-    </div>
-
     <script>
-        // --- Gemini API Integration ---
-
-        const explainResearchBtn = document.getElementById('explain-research-btn');
-        const researchDescription = document.getElementById('research-description').textContent.trim();
-        const researchExplanationDiv = document.getElementById('research-explanation');
-        const summarizeBtns = document.querySelectorAll('.summarize-btn');
-        const errorModal = document.getElementById('error-modal');
-        const errorMessage = document.getElementById('error-message');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-
-        // Function to show the error modal
-        function showError(message) {
-            errorMessage.textContent = message;
-            errorModal.classList.remove('hidden');
-        }
-
-        // Close modal
-        closeModalBtn.addEventListener('click', () => {
-            errorModal.classList.add('hidden');
-        });
-
-        // Generic function to call the Gemini API
-        async function callGeminiAPI(prompt, button) {
-            const btnText = button.querySelector('.btn-text');
-            const loader = button.querySelector('.loader');
-
-            btnText.classList.add('hidden');
-            loader.classList.remove('hidden');
-            button.disabled = true;
-
-            const apiKey = ""; // API key is handled by the environment
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-            
-            const payload = {
-                contents: [{
-                    role: "user",
-                    parts: [{ text: prompt }]
-                }]
-            };
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) {
-                    throw new Error(`API request failed with status ${response.status}`);
-                }
-
-                const result = await response.json();
-                
-                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
-                    return result.candidates[0].content.parts[0].text;
-                } else {
-                    // Handle cases where the response structure is unexpected
-                    console.error("Unexpected API response structure:", result);
-                    throw new Error('Could not extract text from API response.');
-                }
-
-            } catch (error) {
-                console.error("Error calling Gemini API:", error);
-                showError(`Failed to generate content. ${error.message}. Please try again later.`);
-                return null;
-            } finally {
-                btnText.classList.remove('hidden');
-                loader.classList.add('hidden');
-                button.disabled = false;
-            }
-        }
-
-        // Event listener for explaining research
-        explainResearchBtn.addEventListener('click', async () => {
-            const prompt = `Please explain the following research focus in simple, accessible terms for a non-expert audience, like a journalist or an undergraduate student from a different field. Keep it concise (about 2-3 sentences) and engaging. Here is the research description: "${researchDescription}"`;
-            
-            const explanation = await callGeminiAPI(prompt, explainResearchBtn);
-
-            if (explanation) {
-                researchExplanationDiv.innerHTML = explanation.replace(/\n/g, '<br>');
-                researchExplanationDiv.classList.remove('hidden');
-            }
-        });
-
-        // Event listeners for summarizing publications
-        summarizeBtns.forEach(btn => {
-            btn.addEventListener('click', async () => {
-                const publicationCard = btn.closest('.bg-white');
-                const title = publicationCard.querySelector('.pub-title').textContent.trim();
-                const authors = publicationCard.querySelector('.pub-authors').textContent.trim();
-                const summaryOutputDiv = publicationCard.querySelector('.summary-output');
-
-                const prompt = `You are a science communicator. Generate a short, easy-to-understand summary (a layman's summary) for a scientific paper. Explain its key findings and potential impact for a non-specialist audience. Here is the paper's information:\n\nTitle: "${title}"\nAuthors: ${authors}\n\nGenerate the summary:`;
-
-                const summary = await callGeminiAPI(prompt, btn);
-
-                if (summary) {
-                    summaryOutputDiv.innerHTML = summary.replace(/\n/g, '<br>');
-                    summaryOutputDiv.classList.remove('hidden');
-                }
-            });
-        });
-
-
-        // --- General Website Interactivity ---
-
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
