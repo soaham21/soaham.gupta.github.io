@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachchidanand Soaham Gupta | Graduate Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            scroll-margin-top: 64px; /* Adjust for fixed header height */
+        }
+        .summary-box {
+            background-color: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.25rem;
+        }
+        .loader {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #FFF;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            margin-right: 8px;
+        }
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">Sachchidanand Soaham Gupta</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="#research" class="text-gray-600 hover:text-blue-600 transition duration-300">Research</a>
+                <a href="#publications" class="text-gray-600 hover:text-blue-600 transition duration-300">Publications</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="#research" class="block py-2 text-gray-600 hover:text-blue-600">Research</a>
+            <a href="#publications" class="block py-2 text-gray-600 hover:text-blue-600">Publications</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- About Section -->
+        <section id="about" class="section flex flex-col md:flex-row items-center mb-24">
+            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                <img src="P1001326.jpg" alt="Sachchidanand Soaham Gupta" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/256x256/E2E8F0/4A5568?text=S.S.G';">
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Sachchidanand Soaham Gupta</h1>
+                <p class="text-xl text-blue-600 font-medium mb-6">PhD Candidate in Chemistry</p>
+                <div id="research-description" class="text-lg text-gray-700 mb-4 space-y-4">
+                    <p>
+                        My research lies at the intersection of nanomaterials chemistry, chirality control, and bioanalytical applications, with a primary focus on single-walled carbon nanotubes (SWCNTs) as tunable near-infrared (nIR) optical platforms.
+                    </p>
+                    <p>
+                        During my doctoral work at the University of Pittsburgh, I investigate methods to precisely control and exploit the unique optical and chiroptical properties of SWCNTs. My research combines non-covalent enantiomer separation, sp³-defect engineering, and optical chirality modulation, aiming to create next-generation SWCNT-based probes for biosensing and biointerface design.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-4 mb-6">
+                    <a href="Sachchidanand Soaham Gupta-CV .docx" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300 shadow-sm">View CV</a>
+                    <a href="mailto:soaham.gupta@pitt.edu" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-300 transition duration-300">Email Me</a>
+                </div>
+                 <!-- Gemini Feature: Explain Research -->
+                <button id="explain-research-btn" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition duration-300 shadow-sm flex items-center justify-center">
+                    <span class="btn-text">✨ Explain My Research in Simple Terms</span>
+                    <span class="loader hidden"></span>
+                </button>
+                <div id="research-explanation" class="summary-box mt-4 hidden"></div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="section mb-24">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Research Interests</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-3xl text-blue-600 mb-4"><i class="fas fa-atom"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Nanomaterials & Chirality</h3>
+                    <p class="text-gray-600">Exploring chirality in low-dimensional nanomaterials and developing novel defect-engineering strategies to control their optical and chiroptical properties.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-3xl text-blue-600 mb-4"><i class="fas fa-cogs"></i></div>
+                    <h3 class="text-xl font-bold mb-2">SWCNT Platform Engineering</h3>
+                    <p class="text-gray-600">Using DNA-wrapping and chemical functionalization to create tailored single-walled carbon nanotube (SWCNT) platforms with modulated photoluminescence.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-3xl text-blue-600 mb-4"><i class="fas fa-vial"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Bioanalytical Sensing</h3>
+                    <p class="text-gray-600">Designing sensitive and selective near-infrared (nIR) fluorescent probes for detecting biomolecules and studying biochemical interactions at nano-bio interfaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section mb-24">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Publications</h2>
+            <div class="space-y-8">
+                <!-- Publication Item -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-sm mb-2">Review Article | 2024</p>
+                    <h3 class="text-xl font-bold mb-2 pub-title">Leveraging nanomaterials for ultrasensitive biosensors in early cancer detection: a review</h3>
+                    <p class="text-gray-700 mb-4 pub-authors">D Khandelwal, A Bhattacharya, V Kumari, <strong>SS Gupta</strong>, KR Ranjan, V Mishra</p>
+                    <p class="text-gray-600 mb-4"><em>Journal of Materials Chemistry B</em></p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="#" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
+                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
+                            <span class="btn-text">✨ Generate Layman's Summary</span>
+                            <span class="loader hidden"></span>
+                        </button>
+                    </div>
+                    <div class="summary-output summary-box hidden"></div>
+                </div>
+                 <!-- Publication Item -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-sm mb-2">Book Chapter | 2023</p>
+                    <h3 class="text-xl font-bold mb-2 pub-title">Essential Oil-Based Biopesticides</h3>
+                    <p class="text-gray-700 mb-4 pub-authors">S Jindala, N Yadav, D Gupta, <strong>SS Gupta</strong>, M Sharma, K Sharma, ...</p>
+                    <p class="text-gray-600 mb-4"><em>Essential Oils: Extraction Methods and Applications, 193-219</em></p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:d1gkVwhDpl0C" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
+                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
+                            <span class="btn-text">✨ Generate Layman's Summary</span>
+                            <span class="loader hidden"></span>
+                        </button>
+                    </div>
+                    <div class="summary-output summary-box hidden"></div>
+                </div>
+                <!-- Publication Item -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-sm mb-2">Journal | 2021</p>
+                    <h3 class="text-xl font-bold mb-2 pub-title">Amino acid derived biopolymers: Recent advances and biomedical applications</h3>
+                    <p class="text-gray-700 mb-4 pub-authors"><strong>SS Gupta</strong>, V Mishra, MD Mukherjee, P Saini, KR Ranjan</p>
+                    <p class="text-gray-600 mb-4"><em>International journal of biological macromolecules 188, 542-567</em></p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:u-x6o8ySG0sC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
+                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
+                            <span class="btn-text">✨ Generate Layman's Summary</span>
+                            <span class="loader hidden"></span>
+                        </button>
+                    </div>
+                    <div class="summary-output summary-box hidden"></div>
+                </div>
+                <!-- Publication Item -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-sm mb-2">Journal | 2021</p>
+                    <h3 class="text-xl font-bold mb-2 pub-title">Green synthesis of gold nanoparticles from Combretum indicum and their characterization</h3>
+                    <p class="text-gray-700 mb-4 pub-authors"><strong>SS Gupta</strong>, P Patanjali, NK Mishra, A Kumar, I Chopra, R Singh</p>
+                    <p class="text-gray-600 mb-4"><em>Indian Journal of Chemical Technology Vol. 28, 730-734</em></p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:2osOgNQ5qMEC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
+                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
+                            <span class="btn-text">✨ Generate Layman's Summary</span>
+                            <span class="loader hidden"></span>
+                        </button>
+                    </div>
+                    <div class="summary-output summary-box hidden"></div>
+                </div>
+                 <!-- Publication Item -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-sm mb-2">Book Chapter | 2021</p>
+                    <h3 class="text-xl font-bold mb-2 pub-title">Advancing water quality assessment via artificial neural networks (ANNs)</h3>
+                    <p class="text-gray-700 mb-4 pub-authors"><strong>SS Gupta</strong>, R Singh, P Chaudhary</p>
+                    <p class="text-gray-600 mb-4"><em>Spectroscopy and Machine Learning for Water Quality Analysis</em></p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:Y0pCki6q_DkC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
+                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
+                            <span class="btn-text">✨ Generate Layman's Summary</span>
+                            <span class="loader hidden"></span>
+                        </button>
+                    </div>
+                    <div class="summary-output summary-box hidden"></div>
+                </div>
+                <!-- Publication Item -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-sm mb-2">Book Chapter | 2019</p>
+                    <h3 class="text-xl font-bold mb-2 pub-title">Sol–Gel Deposition of Thin Films</h3>
+                    <p class="text-gray-700 mb-4 pub-authors">L Nagyal, <strong>SS Gupta</strong>, R Singh, A Kumar, P Chaudhary</p>
+                    <p class="text-gray-600 mb-4"><em>Digital Encyclopedia of Applied Physics, 1-22</em></p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:9yKSN-GCB0IC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
+                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
+                            <span class="btn-text">✨ Generate Layman's Summary</span>
+                            <span class="loader hidden"></span>
+                        </button>
+                    </div>
+                    <div class="summary-output summary-box hidden"></div>
+                </div>
+                <!-- Publication Item -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-sm mb-2">Journal | 2018</p>
+                    <h3 class="text-xl font-bold mb-2 pub-title">Trimetallic oxide nanocomposites of transition metals titanium and vanadium by sol-gel technique: synthesis, characterization, and electronic properties</h3>
+                    <p class="text-gray-700 mb-4 pub-authors">A Kumar, NK Mishra, K Sachan, MA Ali, <strong>SS Gupta</strong>, R Singh</p>
+                    <p class="text-gray-600 mb-4"><em>Materials Research Express 5 (4), 045037</em></p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0tncwMcAAAAJ&citation_for_view=0tncwMcAAAAJ:qjMakFHDy7sC" target="_blank" class="text-blue-600 font-semibold hover:underline">Link</a>
+                        <button class="summarize-btn bg-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-600 text-sm flex items-center justify-center">
+                           <span class="btn-text">✨ Generate Layman's Summary</span>
+                           <span class="loader hidden"></span>
+                        </button>
+                    </div>
+                    <div class="summary-output summary-box hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <p class="text-center text-gray-700 mb-6">
+                    I'm always open to discussing research, new ideas, or potential collaborations.
+                </p>
+                <div class="text-center">
+                     <a href="mailto:soaham.gupta@pitt.edu" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition duration-300 shadow-sm text-lg">
+                        <i class="fas fa-envelope mr-2"></i> soaham.gupta@pitt.edu
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-6 mt-8 text-2xl text-gray-600">
+                    <a href="#" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://scholar.google.com/citations?user=0tncwMcAAAAJ&hl=en" target="_blank" class="hover:text-blue-600 transition duration-300"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-24">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-600">
+            <p>&copy; 2025 Sachchidanand Soaham Gupta. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for errors -->
+    <div id="error-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-2xl max-w-sm w-full">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Error</h3>
+            <p id="error-message" class="text-gray-700 mb-6">An unexpected error occurred.</p>
+            <button id="close-modal-btn" class="bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition w-full">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // --- Gemini API Integration ---
+
+        const explainResearchBtn = document.getElementById('explain-research-btn');
+        const researchDescription = document.getElementById('research-description').textContent.trim();
+        const researchExplanationDiv = document.getElementById('research-explanation');
+        const summarizeBtns = document.querySelectorAll('.summarize-btn');
+        const errorModal = document.getElementById('error-modal');
+        const errorMessage = document.getElementById('error-message');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        // Function to show the error modal
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorModal.classList.remove('hidden');
+        }
+
+        // Close modal
+        closeModalBtn.addEventListener('click', () => {
+            errorModal.classList.add('hidden');
+        });
+
+        // Generic function to call the Gemini API
+        async function callGeminiAPI(prompt, button) {
+            const btnText = button.querySelector('.btn-text');
+            const loader = button.querySelector('.loader');
+
+            btnText.classList.add('hidden');
+            loader.classList.remove('hidden');
+            button.disabled = true;
+
+            const apiKey = ""; // API key is handled by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{
+                    role: "user",
+                    parts: [{ text: prompt }]
+                }]
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
+                    return result.candidates[0].content.parts[0].text;
+                } else {
+                    // Handle cases where the response structure is unexpected
+                    console.error("Unexpected API response structure:", result);
+                    throw new Error('Could not extract text from API response.');
+                }
+
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                showError(`Failed to generate content. ${error.message}. Please try again later.`);
+                return null;
+            } finally {
+                btnText.classList.remove('hidden');
+                loader.classList.add('hidden');
+                button.disabled = false;
+            }
+        }
+
+        // Event listener for explaining research
+        explainResearchBtn.addEventListener('click', async () => {
+            const prompt = `Please explain the following research focus in simple, accessible terms for a non-expert audience, like a journalist or an undergraduate student from a different field. Keep it concise (about 2-3 sentences) and engaging. Here is the research description: "${researchDescription}"`;
+            
+            const explanation = await callGeminiAPI(prompt, explainResearchBtn);
+
+            if (explanation) {
+                researchExplanationDiv.innerHTML = explanation.replace(/\n/g, '<br>');
+                researchExplanationDiv.classList.remove('hidden');
+            }
+        });
+
+        // Event listeners for summarizing publications
+        summarizeBtns.forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const publicationCard = btn.closest('.bg-white');
+                const title = publicationCard.querySelector('.pub-title').textContent.trim();
+                const authors = publicationCard.querySelector('.pub-authors').textContent.trim();
+                const summaryOutputDiv = publicationCard.querySelector('.summary-output');
+
+                const prompt = `You are a science communicator. Generate a short, easy-to-understand summary (a layman's summary) for a scientific paper. Explain its key findings and potential impact for a non-specialist audience. Here is the paper's information:\n\nTitle: "${title}"\nAuthors: ${authors}\n\nGenerate the summary:`;
+
+                const summary = await callGeminiAPI(prompt, btn);
+
+                if (summary) {
+                    summaryOutputDiv.innerHTML = summary.replace(/\n/g, '<br>');
+                    summaryOutputDiv.classList.remove('hidden');
+                }
+            });
+        });
+
+
+        // --- General Website Interactivity ---
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
