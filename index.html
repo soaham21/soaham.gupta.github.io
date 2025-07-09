@@ -16,19 +16,11 @@
         .section {
             scroll-margin-top: 64px; /* Adjust for fixed header height */
         }
-        /* Hide one of the theme icons by default */
-        .dark #theme-toggle-light-icon {
-            display: none;
-        }
-        #theme-toggle-dark-icon {
-            display: none;
-        }
-        .dark #theme-toggle-dark-icon {
-            display: block;
-        }
+        .dark #theme-toggle-light-icon { display: none; }
+        #theme-toggle-dark-icon { display: none; }
+        .dark #theme-toggle-dark-icon { display: block; }
     </style>
     <script>
-        // Set theme on initial load
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark')
         } else {
@@ -41,15 +33,14 @@
     <!-- Header & Navigation -->
     <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-900 dark:text-white">Sachchidanand Soaham Gupta</a>
+            <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">Sachchidanand Soaham Gupta</a>
             <div class="flex items-center">
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">About</a>
-                    <a href="#research" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Research</a>
-                    <a href="#publications" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Publications</a>
-                    <a href="#contact" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Contact</a>
+                    <a href="index.html" class="text-blue-600 dark:text-blue-400 font-semibold">About</a>
+                    <a href="research.html" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Research</a>
+                    <a href="publications.html" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Publications</a>
+                    <a href="index.html#contact" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Contact</a>
                 </div>
-                 <!-- Theme Toggle Button -->
                 <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-4">
                     <i id="theme-toggle-dark-icon" class="fas fa-moon text-xl"></i>
                     <i id="theme-toggle-light-icon" class="fas fa-sun text-xl"></i>
@@ -61,10 +52,10 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">About</a>
-            <a href="#research" class="block py-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Research</a>
-            <a href="#publications" class="block py-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Publications</a>
-            <a href="#contact" class="block py-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+            <a href="index.html" class="block py-2 text-blue-600 dark:text-blue-400">About</a>
+            <a href="research.html" class="block py-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Research</a>
+            <a href="publications.html" class="block py-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Publications</a>
+            <a href="index.html#contact" class="block py-2 text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
         </div>
     </header>
 
@@ -88,91 +79,18 @@
             </div>
             <div class="md:w-2/3 md:pl-12">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Sachchidanand Soaham Gupta</h1>
-                <p class="text-xl text-blue-600 dark:text-blue-400 font-medium mb-6">PhD Candidate in Chemistry, University of Pittsburgh</p>
+                <p class="text-xl text-blue-600 dark:text-blue-400 font-medium mb-6">Doctoral Researcher in Chemistry</p>
                 <div id="research-description" class="text-lg text-gray-700 dark:text-slate-400 mb-4 space-y-4">
                     <p>
-                        I am a doctoral researcher in the Department of Chemistry at the University of Pittsburgh, where I have been working since 2022. I work in 
-                        <a href="https://starresearchgroup.weebly.com/" target="_blank" class="text-purple-600 dark:text-purple-400 underline hover:text-purple-800 dark:hover:text-purple-300">
-                            Prof. Alexander Star's Sensor Technology Advanced Research (STAR)
-                        </a> 
-                        group focusing on nanomaterials and bioanalytical chemistry. I received my M.Sc. in Applied Chemistry from Amity University, Noida, and my B.Sc. in Industrial Chemistry from the University of Delhi.
+                        I am a doctoral researcher in the Department of Chemistry at the University of Pittsburgh, where I have been working since 2022. I am also affiliated with interdisciplinary research initiatives in nanomaterials and bioanalytical chemistry. I received my M.Sc. in Applied Chemistry from Amity University, Noida, and my B.Sc. in Industrial Chemistry from the University of Delhi.
                     </p>
                     <p>
                         My research interests lie at the intersection of nanomaterials chemistry, chirality control, and bioanalytical applications, with a primary focus on harnessing single-walled carbon nanotubes (SWCNTs) as tunable near-infrared (nIR) optical platforms. My long-term goal is to develop precise methods to control and exploit the unique optical and chiroptical properties of SWCNTs for advanced biosensing and biointerface engineering.
                     </p>
-                    <p>In pursuit of this vision, my research explores the following key themes:</p>
-                    <ul class="list-disc list-inside space-y-2 pl-4">
-                        <li>Non-covalent enantiomer separation and sorting techniques</li>
-                        <li>sp³-defect engineering and photochemical functionalization</li>
-                        <li>Optical chirality modulation and chiroptical property tuning</li>
-                        <li>Applications in biosensing and biointerface design</li>
-                    </ul>
-                    <p>
-                        If you are interested in collaborating or learning more about my work on SWCNTs, chirality, and bioanalytical nanomaterials, please feel free to reach out!
-                    </p>
                 </div>
                 <div class="flex flex-wrap gap-4 mb-6">
-                    <a href="Sachchidanand Soaham Gupta-CV.pdf" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition duration-300 shadow-sm">View CV</a>
+                    <a href="Sachchidanand-Soaham-Gupta-CV.pdf" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition duration-300 shadow-sm">View CV</a>
                     <a href="mailto:soaham.gupta@pitt.edu" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-300 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-slate-200 transition duration-300">Email Me</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Section -->
-        <section id="research" class="section mb-24">
-            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Research Interests</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-3xl text-blue-600 dark:text-blue-400 mb-4"><i class="fas fa-atom"></i></div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Nanomaterials & Chirality</h3>
-                    <p class="text-gray-600 dark:text-slate-400">Exploring chirality in SWCNTs and exploring novel defect-engineering strategies to control their optical and chiroptical properties.</p>
-                </div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-3xl text-blue-600 dark:text-blue-400 mb-4"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">SWCNT Platform Engineering</h3>
-                    <p class="text-gray-600 dark:text-slate-400">Using DNA-wrapping and surfactant ATPE to perform entnatiomeric enrichment of SWCNTs and use chemical functionalization to create tailored single-walled carbon nanotube (SWCNT) platforms with modulated photoluminescence..</p>
-                </div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-3xl text-blue-600 dark:text-blue-400 mb-4"><i class="fas fa-vial"></i></div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Bioanalytical Sensing</h3>
-                    <p class="text-gray-600 dark:text-slate-400">Designing sensitive and selective near-infrared (nIR) fluorescent probes for detecting biomolecules and studying biochemical interactions at nano-bio interfaces.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Publications Section -->
-        <section id="publications" class="section mb-24">
-            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Publications</h2>
-            <div class="space-y-8">
-                <!-- Publication Item -->
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Review Article | 2024</p>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Leveraging nanomaterials for ultrasensitive biosensors in early cancer detection: a review</h3>
-                    <p class="text-gray-700 dark:text-slate-300 mb-4">D Khandelwal, A Bhattacharya, V Kumari, <strong>SS Gupta</strong>, KR Ranjan, V Mishra</p>
-                    <p class="text-gray-600 dark:text-slate-400 mb-4"><em>Journal of Materials Chemistry B</em></p>
-                    <div class="flex flex-wrap gap-4 items-center">
-                        <a href="https://pubs.rsc.org/en/content/articlehtml/2024/tb/d4tb02107j" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Link</a>
-                    </div>
-                </div>
-                 <!-- Publication Item -->
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Book Chapter | 2023</p>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Essential Oil-Based Biopesticides</h3>
-                    <p class="text-gray-700 dark:text-slate-300 mb-4">S Jindala, N Yadav, D Gupta, <strong>SS Gupta</strong>, M Sharma, K Sharma, ...</p>
-                    <p class="text-gray-600 dark:text-slate-400 mb-4"><em>Essential Oils: Extraction Methods and Applications, 193-219</em></p>
-                    <div class="flex flex-wrap gap-4 items-center">
-                        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119829614.ch19" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Link</a>
-                    </div>
-                </div>
-                <!-- Publication Item -->
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Journal | 2021</p>
-                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Amino acid derived biopolymers: Recent advances and biomedical applications</h3>
-                    <p class="text-gray-700 dark:text-slate-300 mb-4"><strong>SS Gupta</strong>, V Mishra, MD Mukherjee, P Saini, KR Ranjan</p>
-                    <p class="text-gray-600 dark:text-slate-400 mb-4"><em>International journal of biological macromolecules 188, 542-567</em></p>
-                    <div class="flex flex-wrap gap-4 items-center">
-                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0141813021016950" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Link</a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -189,16 +107,6 @@
                         <i class="fas fa-envelope mr-2"></i> soaham.gupta@pitt.edu
                     </a>
                 </div>
-                <div class="flex justify-center space-x-6 mt-8 text-2xl text-gray-600 dark:text-gray-400">
-                    <a href="https://github.com/soaham21" target="_blank" class="hover:text-blue-600 dark:hover:text-white transition duration-300"><i class="fab fa-github"></i></a>
-                    <a href="https://x.com/Soaham_Gupta98" target="_blank" class="hover:text-blue-600 dark:hover:text-white transition duration-300">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/soahamgupta/" target="_blank" class="hover:text-blue-600 dark:hover:text-white transition duration-300"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://scholar.google.com/citations?user=0tncwMcAAAAJ&hl=en" target="_blank" class="hover:text-blue-600 dark:hover:text-white transition duration-300"><i class="fas fa-graduation-cap"></i></a>
-                </div>
             </div>
         </section>
     </main>
@@ -210,52 +118,6 @@
         </div>
     </footer>
 
-    <script>
-        // --- Theme Toggler Script ---
-        const themeToggleBtn = document.getElementById('theme-toggle');
-
-        themeToggleBtn.addEventListener('click', function() {
-            // toggle icons inside button
-            document.getElementById('theme-toggle-dark-icon').classList.toggle('hidden');
-            document.getElementById('theme-toggle-light-icon').classList.toggle('hidden');
-
-            // if set via local storage previously
-            if (localStorage.getItem('theme')) {
-                if (localStorage.getItem('theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
-                }
-
-            // if NOT set via local storage previously
-            } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
-                }
-            }
-        });
-
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
