@@ -76,6 +76,7 @@
                     </a>
                     <a href="https://scholar.google.com/citations?user=0tncwMcAAAAJ&hl=en" target="_blank" class="hover:text-blue-600 dark:hover:text-white transition duration-300"><i class="fas fa-graduation-cap"></i></a>
                 </div>
+            </div>
             <div class="md:w-2/3 md:pl-12">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Sachchidanand Soaham Gupta</h1>
                 <p class="text-xl text-blue-600 dark:text-blue-400 font-medium mb-6">PhD Candidate in Chemistry, University of Pittsburgh</p>
@@ -117,6 +118,57 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // --- Theme Toggler and Mobile Menu Script ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Function to apply the correct theme and icon state
+            function applyTheme() {
+                if (document.documentElement.classList.contains('dark')) {
+                    themeToggleDarkIcon.classList.remove('hidden');
+                    themeToggleLightIcon.classList.add('hidden');
+                } else {
+                    themeToggleDarkIcon.classList.add('hidden');
+                    themeToggleLightIcon.classList.remove('hidden');
+                }
+            }
+
+            // Event listener for the theme toggle button
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    if (document.documentElement.classList.contains('dark')) {
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                    }
+                    applyTheme();
+                });
+            }
+
+            // Apply theme on initial load
+            applyTheme();
+
+            // Mobile Menu Toggle
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when a link is clicked
+                const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+                for (let link of mobileMenuLinks) {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
