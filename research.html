@@ -13,11 +13,9 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .dark #theme-toggle-light-icon { display: none; }
-        #theme-toggle-dark-icon { display: none; }
-        .dark #theme-toggle-dark-icon { display: block; }
     </style>
     <script>
+        // This script runs first to prevent a flash of the wrong theme
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark')
         } else {
@@ -39,8 +37,8 @@
                     <a href="index.html#contact" class="text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Contact</a>
                 </div>
                 <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-4">
-                    <i id="theme-toggle-dark-icon" class="fas fa-moon text-xl"></i>
-                    <i id="theme-toggle-light-icon" class="fas fa-sun text-xl"></i>
+                    <i id="theme-toggle-dark-icon" class="fas fa-moon text-xl hidden"></i>
+                    <i id="theme-toggle-light-icon" class="fas fa-sun text-xl hidden"></i>
                 </button>
                 <button id="mobile-menu-button" class="md:hidden text-gray-700 dark:text-slate-300 focus:outline-none ml-2">
                     <i class="fas fa-bars text-2xl"></i>
@@ -72,7 +70,16 @@
                     <li>Applications in biosensing and biointerface design (Biosens Bioelectron 2025, Anal Chem 2025)</li>
                 </ul>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+            <!-- Research Image -->
+            <div class="my-12 flex justify-center">
+                <figure>
+                    <img src="dEFECT-eMISSION.png" alt="A diagram showing defect-state emission from a single-walled carbon nanotube." class="rounded-lg shadow-lg max-w-full md:max-w-3xl h-auto" onerror="this.onerror=null;this.src='https://placehold.co/800x450/E2E8F0/4A5568?text=Research+Image+Not+Found';">
+                    <figcaption class="text-center text-sm text-gray-500 dark:text-slate-500 mt-2">Illustration of defect-state emission in SWCNTs.</figcaption>
+                </figure>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                     <div class="text-3xl text-blue-600 dark:text-blue-400 mb-4"><i class="fas fa-atom"></i></div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Nanomaterials & Chirality</h3>
@@ -99,6 +106,57 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // --- Theme Toggler and Mobile Menu Script ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Function to apply the correct theme and icon state
+            function applyTheme() {
+                if (document.documentElement.classList.contains('dark')) {
+                    themeToggleDarkIcon.classList.remove('hidden');
+                    themeToggleLightIcon.classList.add('hidden');
+                } else {
+                    themeToggleDarkIcon.classList.add('hidden');
+                    themeToggleLightIcon.classList.remove('hidden');
+                }
+            }
+
+            // Event listener for the theme toggle button
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    if (document.documentElement.classList.contains('dark')) {
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                    }
+                    applyTheme();
+                });
+            }
+
+            // Apply theme on initial load
+            applyTheme();
+
+            // Mobile Menu Toggle
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when a link is clicked
+                const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+                for (let link of mobileMenuLinks) {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
